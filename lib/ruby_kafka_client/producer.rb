@@ -2,11 +2,19 @@ module RubyKafkaClient
 
   class Producer
 
-    def initialize(borkers, client_id)
-      @borker    = borkers
+    ##
+    # ==== Description
+    #
+    # ==== Example
+    # brokers = ["127.0.0.1:9092", "127.0.0.1:9092"]
+    # client_id = "test_client"
+    # RubyKafkaClient::Producer.new(brokers, client_id)
+    ##
+    def initialize(brokers, client_id)
+      @brokers   = brokers
       @client_id = client_id
 
-      @producer = ::Poseidon::Producer.new(@borker, @client_id)
+      @producer = ::Poseidon::Producer.new(@brokers, @client_id)
     end
 
     ##
