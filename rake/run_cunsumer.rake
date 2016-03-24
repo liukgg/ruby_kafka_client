@@ -9,7 +9,7 @@
 # 请自行处理异常和记录日志，但是god会监控进程，在进程dead后重启kafka进程。
 #
 # 启动方式：
-# bundle exec rake kafka:consumer:run[SellerOnlineOffline] RAILS_ENV=production
+# bundle exec rake kafka:consumer:run[Example] RAILS_ENV=production
 ##
 namespace :kafka do
   namespace :consumer do
@@ -28,14 +28,12 @@ namespace :kafka do
   # ==== Descripton
   # kafka消费消息
   #
-  # 商城topic： hm_product_update
-  #
   # 参考：
   # https://github.com/bpot/poseidon
   # https://github.com/bsm/poseidon_cluster
   #
   # ==== Params
-  # name: 下划线形式，如： 'seller_online_offline'
+  # name: 下划线形式，如： 'example_consumer'
   ##
   def run_consumer(name)
     begin
