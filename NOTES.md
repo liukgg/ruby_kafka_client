@@ -1,5 +1,8 @@
 # TODOLISt
 
+gem的构建方式和相关基础知识，可以参考：
+https://github.com/liukgg/example_gem
+
 1,优化重启方式
 原来的重启方式：  cat  /tmp/xxxx-kafka-#{consumer_name}.pid  | xargs kill -15
     其中， #{consumer_name}请替换为all_consumers中具体的消费者名称，比如“example”。
